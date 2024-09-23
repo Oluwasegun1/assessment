@@ -17,7 +17,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import user from "../../assets/createIcon.svg";
-import cancel from "../../assets/X.svg";
 
 type Props = {
   handleCreate: () => void;
@@ -28,17 +27,13 @@ const CreateUser: React.FC<Props> = ({ handleCreate }) => {
     <Dialog open={true} onOpenChange={handleCreate}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className="flex items-center justify-center relative">
-            <img src={user} alt="icon" width={60} height={60} />
-            <h2>New User</h2>
-            <img
-              src={cancel}
-              alt="cancel"
-              width={30}
-              height={30}
-              className="absolute right-0 top-0 cursor-pointer"
-              onClick={handleCreate}
-            />
+          <DialogTitle className="relative flex items-center justify-center">
+            <div className="flex justify-between items-center w-full">
+              <div className="flex items-center space-x-2">
+                <img src={user} alt="icon" width={60} height={60} />
+                <h2>New User</h2>
+              </div>
+            </div>
           </DialogTitle>
         </DialogHeader>
         <form className="min-h-[100px] space-y-4 md:space-y-6 mb-4">
