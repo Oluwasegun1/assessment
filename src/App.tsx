@@ -1,10 +1,10 @@
-import Navbar from "./component/Navbar";
+import Navbar from "./component/layouts/Navbar";
 
 import "./App.css";
 import "./index.css";
 import AppLayout from "./component/AppLayout";
-// import Tab from "./component/mainpage/Tab";
-import Settings from "@/component/mainpage/Settings";
+
+import Settings from "@/component/mainpage/Layout";
 
 function App() {
   return (
